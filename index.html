@@ -8,24 +8,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
-    // Toggle sidebar menu
-    function toggleMenu() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("active");
-    }
-  </script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+</script>
+
+
 </head>
 <body>
-  <!-- Hamburger Menu Icon -->
+
+  <!-- Hamburger Menu Icon 
   <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
 
-  <!-- Sidebar Navigation Links -->
+
+  Sidebar Navigation Links 
   <div class="side-nav" id="sidebar">
-    <a href="batches.html">Trainings/Batches</a>
-    <a href="#instructors">Instructors</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact Us</a>
-  </div>
+  <a href="batches.html">Trainings</a>
+  <a href="instructors.html">Instructors</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+</div>-->
+<!-- Hamburger Icon -->
+<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
+<!-- Sidebar -->
+<div class="side-nav" id="sidebar">
+  <a href="trainings.html">Trainings</a>
+  <a href="instructors.html">Instructors</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+
 
   <!-- Hero Section (Split View) -->
   <div class="hero">
@@ -144,5 +159,20 @@
     <p>&copy; 2025 Sarvah Dance Academy. All rights reserved.</p>
     <p>Quick Links | Privacy Policy | Terms of Service</p>
   </footer>
+  <script>
+  function toggleMenu() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+
+  // Optional: Close sidebar when clicking outside (for mobile)
+  document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuIcon = document.querySelector('.menu-icon');
+    if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+      sidebar.classList.remove("active");
+    }
+  });
+</script>
 </body>
 </html>
